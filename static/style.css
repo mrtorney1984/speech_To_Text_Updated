@@ -1,0 +1,102 @@
+/* static/style.css */
+
+body {
+    font-family: sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: antiquewhite;
+}
+
+.container {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 80%;
+    max-width: 600px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+h2 {
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+    color: #555;
+}
+
+.section {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 20px;
+}
+.section:last-child {
+    border-bottom: none; /*remove border from last section*/
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;  /* Spacing between controls */
+    margin-bottom: 10px;
+}
+
+select,
+button,
+textarea,
+input[type="file"] { /* Style file input */
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+/* Style the file input to look like a button (optional) */
+input[type="file"] {
+    width: auto; /* Allow the button to size to its content */
+    cursor: pointer;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    border: none; /* Remove border */
+}
+button:hover {
+     background-color: #45a049;
+}
+button:disabled{
+    background-color: #cccccc;
+    cursor: not-allowed;
+
+}
+
+textarea {
+    width: 95%;
+    min-height: 100px;
+    resize: vertical; /* Allow vertical resizing */
+}
+/* Hide audio element initially */
+#audio-playback {
+    display: none;
+    margin-top: 10px;
+}
+#stt-result, #file-upload-result {
+    margin-top: 10px;
+    font-style: italic;
+    color:#555
+}
+.file-upload {
+    margin-top: 20px;
+}
+
+.file-upload h3{
+  color: #555;
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speech-to-Text & Text-to-Speech</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Speech-to-Text & Text-to-Speech</h1>
+
+        <div class="section">
+            <h2>Speech to Text</h2>
+            <div class="controls">
+                <select id="stt-language">
+                    <!-- Options added dynamically with JavaScript -->
+                </select>
+                <button id="record-button">Record</button>
+                <button id="stop-button" disabled>Stop</button>
+            </div>
+            <div id="stt-result"></div>
+            <audio id="audio-playback" controls></audio>
+        </div>
+
+        <div class="section">
+            <h2>Text to Speech</h2>
+             <div class="controls">
+                <select id="tts-language">
+                    <!-- Options added dynamically with JavaScript -->
+                </select>
+                <select id="tts-tld">
+                   <!-- Options will load with Javascript -->
+                </select>
+            </div>
+            <textarea id="tts-input" name="text" placeholder="Enter text here..."></textarea>
+            <button id="speak-button">Speak</button>
+            <button id="tts-stop-button" disabled>Stop</button> <!-- TTS Stop Button -->
+
+            <div class="file-upload">
+                <h3>Upload File (DOCX, DOC, PDF)</h3>
+                <input type="file" id="file-upload" name="file" accept=".docx,.doc,.pdf">
+                <button id="upload-button">Upload and Speak</button>
+             </div>
+              <div id="file-upload-result"></div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
